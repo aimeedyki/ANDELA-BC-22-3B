@@ -173,9 +173,7 @@ const calculateSalary=()=>{
 			tax = 0.1 * salary;
 
 	};
-
-	}
-
+	
 	$("#bs").html("");
 	$("#bs").html('&#8358;'+formatToNaira(basicSalary));
 
@@ -205,6 +203,9 @@ const calculateSalary=()=>{
 	// alert(type);
 	// alert(level);
 	$('#ta').show();
+
+	}
+
 }
 
  formatToNaira =(num) =>{
