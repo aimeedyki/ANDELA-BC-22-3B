@@ -1,0 +1,188 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Salary Calculator</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type="text/css">
+        #container {
+            background-image: url("background.jpg");
+            margin: 0;
+            padding: 0;
+            font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+        
+        .first{
+            width: 400px;
+            margin: 2em auto;
+            padding: 50px;
+            background-color: #fff;
+            border-radius: 1em;
+        }
+        
+        .second{
+            width: 800px;
+            margin: 2em auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 1em;
+        }
+        
+        .third{
+            width: 600px;
+            margin: 2em auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 1em;
+        }
+        
+        .employee {
+            padding-right: 10px;
+        }
+        
+        #position {
+            margin-left: 140px;
+            width: 250px;
+        }
+        
+        #level {
+            margin-left: 140px;
+            width: 250px;
+        }
+        
+        #calculator {
+            height: 80px;
+            margin-left: 180px;
+        }
+        
+        #submitbutton {
+            padding-left: 10px;
+            margin-left: 330px;
+            margin-top: 30px;
+        }
+        
+        a:link,
+        a:visited {
+            color: #38488f;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 700px) {
+            body {
+                background-color: #fff;
+            }
+            div {
+                width: auto;
+                margin: 0 auto;
+                border-radius: 0;
+                padding: 1em;
+            }
+        }
+    </style>
+</head>
+
+<body id="container" onload="init()">
+    
+    <div class="third" style="text-align:center; font-size:30px;">
+       Salary Calculator       
+    </div>
+    
+    <div class="first">
+        <p class="employee">Employee Position:
+            <select id="type">
+            <option value="Select">Select Position</option>
+            <option value="Director">Director</option>
+            <option value="Executive">Executive</option>
+            <option value="Manager">Manager</option>
+            <option value="Associate">Associate</option>
+            <option value="Intern">Intern</option>
+            </select>
+        </p>
+        
+        <p class="employee">Employee Level:
+            <select id="level">
+            <option value="Select">Select Level</option>
+            <option value="Level One">Level One</option>
+            <option value="Level Two">Level Two</option>
+            <option value="Level Three">Level Three</option>
+            <option value="Level Four">Level Four</option>
+            <option value="Level Five">Level Five</option>
+            </select>
+        </p>
+
+
+        <br/>
+
+        <input onClick="calculateSalary()" type="submit" value="Calculate" />
+    </div>
+
+    <div id="ta"  class="second">
+        
+        <div>
+            <strong>Position: </strong><span id="typee"></span> 
+        </div>
+        <br>
+        <div>
+            <strong>Level: </strong><span id="levele"></span>
+        </div>
+        <br>
+        <div>
+            <strong>Basic Salary: </strong><span id="bs"></span>
+        </div>
+        <br>
+        <div>
+            <strong>Furniture Allowance: </strong><span id="fa"></span>
+        </div>
+        <br>
+        <div>
+            <strong>Leave Allowance: </strong><span id="lb"></span>
+        </div>
+        <br>
+        <div>
+            <strong>Medical Allowance: </strong><span id="ma"></span>
+        </div>
+        <br>
+        <div>
+            <strong>Tax: </strong><span id="tax"></span>
+        </div>
+        <br>
+        <br>
+        <div>
+            <strong>Gross Salary: </strong><span id="gross"></span>
+        </div>
+
+    </div>
+
+<!--     <div id="ta" class="second">
+        <table>
+            <tr><th>Position</th>
+                <th>Level</th>
+                <th>Basic Salary</th>
+                <th>Furniture Allowance</th>
+                <th>Leave Allowance</th>
+                <th>Medical Allowance</th>
+                <th>Tax</th>                
+                <th>Gross Salary </th>
+            </tr>
+            <tr>
+                <td id="typee"> </td>
+                <td id="levele"> </td>
+                <td id="bs"> </td>
+                <td id="fa"> </td>
+                <td id="lb"> </td>
+
+                <td id="ma"> </td>
+                <td id="tax"> </td>
+                <td id="gross"> </td>
+            </tr>
+            
+        </table>
+    </div> -->
+<script src="jquery-1.11.2.min.js"></script>
+<script src="app.js"></script>
+</body>
+
+</html>
